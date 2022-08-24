@@ -1,24 +1,25 @@
 {
-  "image": "ubuntu:latest",
     "features": {
         // Local Cache
-        "v1cache": {},
+        "v1cache": {},  // WARN: Deprecated
         // Direct Tarball
         "https://example.com/direct-tarball.tgz": {},
-        "http://example.com/direct-tarball.tgz": {},
+        "http://example.com/direct-tarball.tgz": {},  // FAIL: Disallow HTTP
         // Local Path
-        "/my/absolute/feature": {},
+        "/my/absolute/feature": {}, // FAIL: Disallow absolute paths
         "./my/relative/feature": {},
-        "../my/other/relative/feature": {},
-        // Github Release
-        "github/features/dev-vpn" : {},
-        "github/features/dev-vpn@1" : {},
+        "../my/other/relative/features": {},
+        "github/features/dev-vpn" : {},  // WARN: Deprecated
+        "github/features/dev-vpn@1" : {},  // WARN: Deprecated
         // OCI
         "ghcr.io/devcontainer/features/ruby": {},
         "ghcr.io/devcontainer/features/node:1": {},
         // Invalid
         "github/": {},
         "$ymbols": {},
-        "symbol$": {}
+        "symbol$": {},
+        "ghcr.io": {},
+        "ghcr.io/": {}
+
     }
 }
