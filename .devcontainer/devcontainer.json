@@ -19,7 +19,10 @@
         "$ymbols": {},
         "symbol$": {},
         "ghcr.io": {},
-        "ghcr.io/": {}
+        "ghcr.io/": {},
+        "///": {},
+        "features///": {},
+        "features/": {}
 
     }
 }
